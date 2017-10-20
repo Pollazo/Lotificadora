@@ -3,7 +3,6 @@ package lotificadora;
 
 public class Terreno {
     private double largo, ancho, precio;
-    
     private boolean ocupado;
 
     public boolean getOcupado() {

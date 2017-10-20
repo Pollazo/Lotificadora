@@ -14,9 +14,10 @@ public class Lotificadora {
             for (int j = 0; j < lotes.length; j++) {
                 lotes[i][j] = new Terreno(0.0,0.0,0.0);
                 lotes[i][j].setOcupado(false);
-    }
+            }
+        }   
+    int opcion;
     
-}int opcion;
     do{ 
         
         System.out.println("******Reserve su terreno en cualquiera de nuestros lotes******");
@@ -39,6 +40,7 @@ public class Lotificadora {
                 x= datos.nextInt();
                 System.out.println("Y: ");
                 y = datos.nextInt();
+                
             if(x < 5 && y < 5){
                 System.out.println("Ancho del terreno: ");
                 ancho = datos.nextDouble();
@@ -63,6 +65,7 @@ public class Lotificadora {
                 System.out.println("");
             }
                 break;
+                
             case 2:
                 System.out.println("Cantidad de Terrenos Ocupados: " + pl.terrOcupado());
                 System.out.println("");
@@ -70,13 +73,16 @@ public class Lotificadora {
                 System.out.println("");
                 System.out.println("Cantidad terrenos Vacios: " + pl.terrVacio());
                 break;
+                
             case 3:
                 System.exit(0);
                 break;
+                
             default:
                 System.out.println("Opcion invalida");
                 break;
             }
+        
         }while(opcion != 3);
     }
 }

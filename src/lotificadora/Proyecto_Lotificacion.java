@@ -5,9 +5,9 @@ package lotificadora;
 public class Proyecto_Lotificacion {
     public static Terreno [][] lotes;
 
+
     public Proyecto_Lotificacion() {
         lotes = new Terreno[5][5];
-        
     }
     
     public static boolean estaVacia(int a, int b ){
@@ -17,6 +17,7 @@ public class Proyecto_Lotificacion {
           return false;
       }
     }
+    
     public static int terrOcupado(){
         int cont1 = 0;
 
@@ -40,11 +41,13 @@ public class Proyecto_Lotificacion {
         }
         return total;
     }
+    
+    
     public static int terrVacio(){
         int cont2 = 0;
         for (int i = 0; i < lotes.length; i++) {
             for (int j = 0; j <lotes.length; j++) {
-                if(lotes[i][j].getOcupado()== false){
+                if(lotes[i][j].getOcupado() == false){
                     cont2++;
                     
                 }
